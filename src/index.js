@@ -46,7 +46,7 @@ function breedDisplay(dogs){
     const select = document.getElementById("breed-dropdown");
     select.addEventListener("change", (event) => {
         const ul = document.getElementById("dog-breeds");
-        ul.innerText = '';
+        ul.innerText = '';      /*Event listener clears the list*/
         const letter = event.target.value;      /*targets the drop down and listens for a change, if the user selects a letter, it filters out breeds based on their first letter */
         for(dog in dogs){
             if(dog.charAt(0) === letter){
